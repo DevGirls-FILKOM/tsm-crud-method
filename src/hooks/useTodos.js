@@ -1,39 +1,49 @@
-// TODO: Implementasikan CRUD To-Do di sini
-// gunakan useState + useEffect
-// API bebas, misalnya https://jsonplaceholder.typicode.com/todos
+// TODO: Lengkapi semua fitur CRUD dengan useState + useEffect.
+// API saran: https://jsonplaceholder.typicode.com/todos
+
+// import { useEffect, useState } from "react";
 
 export function useTodos() {
   // const [todos, setTodos] = useState([]);
   // const [loading, setLoading] = useState(false);
   // const [error, setError] = useState("");
 
+  // READ (initial fetch)
   // useEffect(() => {
-  //   // TODO: Fetch initial todos dari API
+  //   // TODO: fetch todos (limit secukupnya)
   // }, []);
 
-  // function addTodo(title) {
-  //   // TODO: Create todo baru
+  // CREATE
+  // async function addTodo(title) {
+  //   // TODO: POST -> update state
   // }
 
-  // function toggleTodo(id) {
-  //   // TODO: Update completed true/false
+  // TOGGLE (completed)
+  // async function toggleTodo(id) {
+  //   // TODO: PATCH -> update state
   // }
 
-  // function updateTodo(id, newTitle) {
-  //   // TODO: Update judul todo
+  // UPDATE (edit title)
+  // async function updateTodo(id, newTitle) {
+  //   // TODO: PATCH -> update state
   // }
 
-  // function deleteTodo(id) {
-  //   // TODO: Delete todo
+  // DELETE
+  // async function deleteTodo(id) {
+  //   // TODO: DELETE -> update state
   // }
 
+  // Placeholder supaya app tidak error sebelum diisi.
   return {
-    todos: [],         // TODO: return real todos
+    todos: [
+      { id: 1, title: "Contoh todo 1", completed: false },
+      { id: 2, title: "Contoh todo 2", completed: true },
+    ],
     loading: false,
     error: "",
-    addTodo: () => {}, 
-    toggleTodo: () => {},
-    updateTodo: () => {},
-    deleteTodo: () => {}
+    addTodo: () => {},      // TODO
+    toggleTodo: () => {},   // TODO
+    updateTodo: () => {},   // TODO
+    deleteTodo: () => {},   // TODO
   };
 }
